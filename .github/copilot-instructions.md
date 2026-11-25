@@ -18,3 +18,4 @@ Project context Copilot should apply to every session in this repository.
 
 - Bookmarks are persisted in the browser using `localStorage` under the `mona-bookmarks` key. Treat stored JSON as untrusted and validate every entry as a `{url, slug}` object before rendering.
 - All browser-only code, including every `localStorage` access, must run behind a `client:load` boundary or the component's inline `<script>` so the static Astro build never touches browser APIs during SSR.
+- Keep the stored bookmark array and reset it cleanly when the user chooses Clear all.
